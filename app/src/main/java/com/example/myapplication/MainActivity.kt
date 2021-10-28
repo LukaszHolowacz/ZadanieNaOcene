@@ -14,13 +14,16 @@ class MainActivity : AppCompatActivity() {//
         var liczbaPierwsza=0
         var liczbaDruga=0
         var wynik=0
+        val tekst2 = findViewById<EditText>(R.id.PoleTekstowe).text.toString()
+        val tekst1 = findViewById<TextView>(R.id.zastapionytext).text.toString()
+        val laczonytekst = tekst1 + tekst2
 
         findViewById<Button>(R.id.textbutton).setOnClickListener {
             findViewById<TextView>(R.id.zastapionytext).text =
                 findViewById<EditText>(R.id.PoleTekstowe).text
         }
         findViewById<Button>(R.id.dopisztekstbutton).setOnClickListener {
-
+            findViewById<TextView>(R.id.dopisanytext).text = laczonytekst.toString()
         }
         findViewById<Button>(R.id.sumabtn).setOnClickListener {
             liczbaPierwsza = findViewById<EditText>(R.id.liczba1pole).text.toString().toInt()
